@@ -4,15 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { registerMicroApps, start } from 'qiankun';
+import apps from './apps'
 
-registerMicroApps([
-  {
-    name: 'data-admin', // app name registered
-    entry: '//localhost:8000',
-    container: '#root',
-    activeRule: '/yourActiveRule',
-  }
-]);
+registerMicroApps(apps, {
+  beforeLoad: app => {
+    console.log('before load app.name=====>>>>>', app.name)
+  },
+  beforeMount: [
+    app => {
+      console.log('[LifeCycle] before mount %c%s', 'color: green;', app.name)
+    }
+  ],
+  afterMount: [
+    app => {
+      console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name)
+    }
+  ],
+  afterUnmount: [
+    app => {
+      console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name)
+    }
+  ]
+})
 
 start({
   sandbox: {
