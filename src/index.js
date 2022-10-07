@@ -29,9 +29,8 @@ registerMicroApps(apps, {
 
 start({
   sandbox: {
-    strictStyleIsolation: true,
-    experimentalStyleIsolation: true,
-    prefetch: "all"
+    // strictStyleIsolation: true,
+    // prefetch: "all"
   }
 });
 const root = ReactDOM.createRoot(document.getElementById('root'));

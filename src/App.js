@@ -1,8 +1,8 @@
 
-import './App.css';
-import { useEffect, useState } from 'react';
-import apps from './apps'
-import { loadMicroApp } from 'qiankun';
+// import './App.css';
+// import { useEffect, useState } from 'react';
+// import apps from './apps'
+// import { loadMicroApp } from 'qiankun';
 function App(props) {
   return (
     <>

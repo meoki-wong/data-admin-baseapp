@@ -4,7 +4,7 @@ const microApps = [
         entry: '//localhost:8000/*',
         container: '#blog-root',
         activeRule: '/react',
-        // props: {
+        // props: { // 传值给子应用
         //   routerBase: '/react'
         // }
       }
