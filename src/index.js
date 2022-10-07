@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps, start, setDefaultMountApp } from 'qiankun';
 import apps from './apps'
 
 registerMicroApps(apps, {
@@ -30,7 +30,8 @@ registerMicroApps(apps, {
 start({
   sandbox: {
     strictStyleIsolation: true,
-    experimentalStyleIsolation: true
+    experimentalStyleIsolation: true,
+    prefetch: "all"
   }
 });
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,7 +40,7 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
+setDefaultMountApp('/blog') // 默认进入微应用
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

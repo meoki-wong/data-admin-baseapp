@@ -1,14 +1,12 @@
 
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import apps from './apps'
+import { loadMicroApp } from 'qiankun';
 function App(props) {
-  const [activeUrl, setActiveUrl] = useState(apps?.[0]?.activeRule);
-
-  
   return (
     <>
-      <main id='root'></main>
+      <main id='blog-root'></main>
     </>
   );
 }
