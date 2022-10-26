@@ -1,7 +1,8 @@
 const microApps = [
     {
         name: 'data-admin', // app name registered
-        entry: 'https://localhost:8000',
+        // entry: 'https://localhost:8000',
+        entry: '/blog/',
         container: '#blog-root',
         activeRule: '/react',
         // props: { // 传值给子应用
@@ -10,7 +11,8 @@ const microApps = [
       },
       {
         name: 'vue-admin', // app name registered
-        entry: '//localhost:9527',
+        // entry: '//localhost:9527',
+        entry: '/blog-admin/',
         container: '#vue-admin-root',
         activeRule: '/vue',
         
