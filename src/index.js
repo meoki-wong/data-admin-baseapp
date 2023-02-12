@@ -9,7 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 
 registerMicroApps(apps, {
 	beforeLoad: (app) => {
-		console.log("before load app.name=====>>>>>", app.name);
+		console.log("before load app.name=====>>>>>", app.name, app);
 	},
 	beforeMount: [
 		(app) => {
